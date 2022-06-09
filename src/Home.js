@@ -2,10 +2,10 @@
 import Feed from './Feed'
 import React from 'react'
 
-function Home({posts}) {
+const Home = ({ posts }) => {
   return (
     <main className='Home'>
-        {posts.length ? (
+       {posts.length ? (
           <Feed posts={posts} />
         ) : (
           <p style={{ marginTop: "2rem "}}>
@@ -18,3 +18,4 @@ function Home({posts}) {
 } 
 
 export default Home
+  

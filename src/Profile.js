@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-function Profile() {
+const Profile=() => {
   return (
     <main>
         <h1>Profile</h1>

@@ -114,10 +114,11 @@ body {
   text-decoration: none;
 }
 
+
 .Nav li:hover,
 .Nav li:focus,
 .Nav li:hover a,
-.nav li:focus a {
+.Nav li:focus a {
   background-color: #fff;
   color: #333;
 }

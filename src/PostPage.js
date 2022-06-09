@@ -1,9 +1,10 @@
 import React from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink  } from 'react-router-dom'
 
-function PostPage({ posts, handleDelete }) {
+
+const PostPage = ({ posts, handleDelete }) => {
   const { id } = useParams();
-  const post = posts.find(post => (post.id) === id);
+  const post = posts.find(post => (post.id).toString() === id);
   return (
     <main className='PostPage'>
         <article className='post'>
@@ -17,6 +18,15 @@ function PostPage({ posts, handleDelete }) {
               </button>
             </>
           }
+          {!post &&
+            <>
+              <h2> Post Not Found</h2>
+              <p>Well, that's disappointing.</p>
+              <p>
+                <NavLink to="/">Visit Our Homepage</NavLink>
+              </p>
+            </>
+          }  
         </article>
     </main> 
   );
