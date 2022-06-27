@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 * {
   margin: 0;
@@ -13,20 +13,19 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: "open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   background-color: #efefef;
 }
 
-
 #root {
   flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
 
 .App {
   width: 100%;
@@ -37,7 +36,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   border: 1px solid #333;
-  box-shadow: 0px 15px gray; 
+  box-shadow: 0px 0px 15px gray;
 }
 
 .Header, .Footer {
@@ -77,8 +76,8 @@ body {
   padding: 1rem 0 0 0.75rem;
 }
 
-.searchForm input[type="text"]{
-  font-family: 'Open sans', sans-serif;
+.searchForm input[type="text"] {
+  font-family: 'Open Sans', sans-serif;
   width: 100%;
   min-height: 48px;
   font-size: 1rem;
@@ -104,7 +103,7 @@ body {
   padding: 1rem;
 }
 
-.Nav li:hover,
+.Nav li:hover, 
 .Nav li:focus {
   padding: 1rem;
 }
@@ -114,31 +113,30 @@ body {
   text-decoration: none;
 }
 
-
-.Nav li:hover,
-.Nav li:focus,
-.Nav li:hover a,
-.Nav li:focus a {
-  background-color: #fff;
+.Nav li:hover, 
+.Nav li:focus, 
+.Nav li:hover a, 
+.Nav li:focus a  {
+  background-color: #eee;
   color: #333;
 }
 
-.Nav li:hover a,
+.Nav li:hover a, 
 .Nav li:focus a {
   cursor: pointer;
 }
 
-.Home, .NewPost, .PostPage, .About, .Mission{
-width: 100%;
-flex-grow: 1;
-padding: 1rem;
-overflow-y:auto;
-background-color: #fff;
+.Home, .NewPost, .PostPage, .About, .Missing {
+  width: 100%;
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #fff;
 }
 
-.post{
+.post {
   margin-top: 1rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid lightgray;
 }
 
@@ -146,9 +144,9 @@ background-color: #fff;
   text-decoration: none;
 }
 
-.Home .post a,
+.Home .post a, 
 .Home .post a:visited {
-  color: #333;
+  color: #000;
 }
 
 .post:first-child {
@@ -177,20 +175,20 @@ background-color: #fff;
   margin-top: 1rem;
 }
 
-.newPostForm input[type='text']
+.newPostForm input[type='text'], 
 .newPostForm textarea {
-font-family: 'Open sans', sans-serif;
-width: 100%;
-min-height: 48px;
-font-size: 1rem;
-padding: 0.25rem;
-border-radius: 0.25rem;
-margin-right: 0.25rem;
-outline: none;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
 }
 
 .newPostForm textarea {
-  height: 100%;
+  height: 100px;
 }
 
 .newPostForm button {
@@ -203,31 +201,38 @@ outline: none;
   cursor: pointer;
 }
 
-.Mission h2, .PostPage h2,
-.Mission p, .PostPage {
-  margin-bottom: 1rem;
+
+.Missing p, .PostPage p, .NewPost p {
+  margin-top: 1rem;
 }
 
 .PostPage button {
   height: 48px;
   min-width: 48px;
   border-radius: 0.25rem;
-  padding:0 .5rem;
-  font-size:1rem;
-  background-color: red;
+  padding: 0.5rem;
+  margin-right: 0.2rem;
+  font-size: 1rem;
   color: #fff;
-  cursor: pointen;
+  cursor: pointer;
+}
+.deleteButton {
+  background-color: red;
+}
+
+.editButton {
+  background-color: green;
 }
 
 .statusMsg {
   margin-top: 2rem;
 }
- 
-@media screen and (min-width: 610px) {
+
+@media only screen and (min-width: 610px) {
   html {
     font-size: 22px;
   }
-  
+
   .Header h1 {
     font-size: 2rem;
   }
@@ -243,10 +248,10 @@ outline: none;
     text-align: right;
   }
 
-  .Nav li:hover,
-  .Nav li:focus a,
-  .Nav li:hover,
-  .Nav li:focus a {
+  .Nav li:hover, 
+  .Nav li:focus, 
+  .Nav li:hover a, 
+  .Nav li:focus a  {
     background-color: #eee;
     color: #333;
   }
@@ -260,15 +265,15 @@ outline: none;
     margin-left: 0.5rem;
   }
 
-  .newPostForm textarea{
+  .newPostForm textarea {
     height: 300px;
   }
 }
 
 @media only screen and (min-width: 992px) {
+
   .Header svg {
-    height: 3rem;
-  } 
+    font-size: 3rem;
+  }
+
 }
-
-

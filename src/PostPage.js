@@ -1,8 +1,11 @@
 import React from 'react';
-import { useParams, NavLink  } from 'react-router-dom'
+import { useParams, Link  } from 'react-router-dom'
+import { useContext  } from 'react';
+import DataContext from './context/DataContext';
 
 
-const PostPage = ({ posts, handleDelete }) => {
+const PostPage = () => {
+  const { posts, handleDelete } = useContext(DataContext);
   const { id } = useParams();
   const post = posts.find(post => (post.id).toString() === id);
   return (
@@ -13,7 +16,8 @@ const PostPage = ({ posts, handleDelete }) => {
               <h2>{post.title}</h2>
               <p className='postDate'>{post.datetime}</p>
               <p className='postBody'>{post.body}</p>
-              <button onClick={() => handleDelete(post.id)}>
+              <Link to={`edit/${post.id}`}><button className='editButton'>Edit Post</button></Link>
+              <button className='deleteButton' onClick={() => handleDelete(post.id)}>
                 Delete Post
               </button>
             </>
@@ -21,15 +25,15 @@ const PostPage = ({ posts, handleDelete }) => {
           {!post &&
             <>
               <h2> Post Not Found</h2>
-              <p>Well, that's disappointing.</p>
+              <p>that's disappointing.</p>
               <p>
-                <NavLink to="/">Visit Our Homepage</NavLink>
+                <Link to="/">Visit Our Homepage</Link>
               </p>
             </>
           }  
         </article>
     </main> 
-  );
+  )
 }
 
 export default PostPage;
